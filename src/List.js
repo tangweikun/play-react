@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import AddPerson from './AddPerson';
 
 export default function List() {
   const [persons, setPersons] = useState([]);
@@ -15,6 +16,7 @@ export default function List() {
 
   return (
     <div>
+      <AddPerson />
       {persons.map((person, index) => (
         <div key={index}>{person.name}</div>
       ))}
