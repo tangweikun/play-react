@@ -14,11 +14,24 @@ export default function List() {
     });
   }, []);
 
+  function handleDelete(id) {
+    // 删除接口
+    axios
+      .delete(`https://jsonplaceholder.typicode.com/users/${id}`)
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+      });
+  }
+
   return (
     <div>
       <AddPerson />
       {persons.map((person, index) => (
-        <div key={index}>{person.name}</div>
+        <div key={index}>
+          {person.name}
+          <span onClick={() => handleDelete(person.id)}>删除</span>
+        </div>
       ))}
     </div>
   );
