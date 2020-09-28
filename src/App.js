@@ -9,6 +9,7 @@ import Demo5 from './demo5';
 import Demo6 from './demo6';
 import Demo7 from './demo7';
 import Demo8 from './demo8';
+import Demo9 from './demo9';
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
           <li>
             <Link to='/demo8'>Demo8</Link>
           </li>
+          <li>
+            <Link to='/demo9'>Demo9</Link>
+          </li>
         </ul>
 
         <Switch>
@@ -65,6 +69,9 @@ function App() {
           </Route>
           <Route path='/demo8'>
             <Demo8 />
+          </Route>
+          <Route path='/demo9'>
+            <Demo9 />
           </Route>
         </Switch>
       </Router>
