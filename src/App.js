@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import './App.css';
-import List from './List';
+import Demo4 from './demo4';
 import Demo1 from './demo1';
 import Demo2 from './demo2';
 import Demo3 from './demo3';
@@ -20,6 +20,9 @@ function App() {
           <li>
             <Link to='/demo3'>TODOLIST</Link>
           </li>
+          <li>
+            <Link to='/demo4'>Table</Link>
+          </li>
         </ul>
 
         <Switch>
@@ -31,6 +34,9 @@ function App() {
           </Route>
           <Route path='/demo3'>
             <Demo3 />
+          </Route>
+          <Route path='/demo4'>
+            <Demo4 />
           </Route>
         </Switch>
       </Router>
