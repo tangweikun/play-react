@@ -65,3 +65,5 @@
 ### AJAX
 
 - postman
+
+https://jsonplaceholder.typicode.com/

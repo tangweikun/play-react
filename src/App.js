@@ -10,12 +10,13 @@ import Demo6 from './pages/demo6';
 import Demo7 from './pages/demo7';
 import Demo8 from './pages/demo8';
 import Demo9 from './pages/demo9';
+import BasicLayout from './BasicLayout';
 
 function App() {
   return (
     <div className='App'>
       <Router>
-        <ul>
+        {/* <ul>
           <li>
             <Link to='/demo1'>React HTTP POST Requests with Fetch</Link>
           </li>
@@ -43,37 +44,39 @@ function App() {
           <li>
             <Link to='/demo9'>Demo9</Link>
           </li>
-        </ul>
+        </ul> */}
 
-        <Switch>
-          <Route path='/demo1'>
-            <Demo1 />
-          </Route>
-          <Route path='/demo2'>
-            <Demo2 />
-          </Route>
-          <Route path='/demo3'>
-            <Demo3 />
-          </Route>
-          <Route path='/demo4'>
-            <Demo4 />
-          </Route>
-          <Route path='/demo5'>
-            <Demo5 />
-          </Route>
-          <Route path='/demo6'>
-            <Demo6 />
-          </Route>
-          <Route path='/demo7'>
-            <Demo7 />
-          </Route>
-          <Route path='/demo8'>
-            <Demo8 />
-          </Route>
-          <Route path='/demo9'>
-            <Demo9 />
-          </Route>
-        </Switch>
+        <BasicLayout>
+          <Switch>
+            <Route path='/demo1'>
+              <Demo1 />
+            </Route>
+            <Route path='/demo2'>
+              <Demo2 />
+            </Route>
+            <Route path='/demo3'>
+              <Demo3 />
+            </Route>
+            <Route path='/demo4'>
+              <Demo4 />
+            </Route>
+            <Route path='/demo5'>
+              <Demo5 />
+            </Route>
+            <Route path='/demo6'>
+              <Demo6 />
+            </Route>
+            <Route path='/demo7'>
+              <Demo7 />
+            </Route>
+            <Route path='/demo8'>
+              <Demo8 />
+            </Route>
+            <Route path='/demo9'>
+              <Demo9 />
+            </Route>
+          </Switch>
+        </BasicLayout>
       </Router>
     </div>
   );
