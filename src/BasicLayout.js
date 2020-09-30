@@ -20,24 +20,21 @@ export default function BasicLayout(props) {
             title={
               <span>
                 <Icon type='user' />
-                subnav 1
+                简单的增删改查
               </span>
             }
           >
-            <Menu.Item key='1'>
-              <Link to='/demo1'>demo1</Link>
-            </Menu.Item>
-            <Menu.Item key='2'>
-              <Link to='/demo2'>demo2</Link>
-            </Menu.Item>
-            <Menu.Item key='3'>
-              <Link to='/demo3'>demo3</Link>
-            </Menu.Item>
-            <Menu.Item key='4'>
+            <Menu.Item key='demo4'>
               <Link to='/demo4'>demo4</Link>
             </Menu.Item>
-            <Menu.Item key='5'>
+            <Menu.Item key='demo5'>
               <Link to='/demo5'>demo5</Link>
+            </Menu.Item>
+            <Menu.Item key='demo6'>
+              <Link to='/demo6'>demo6</Link>
+            </Menu.Item>
+            <Menu.Item key='demo7'>
+              <Link to='/demo7'>demo7</Link>
             </Menu.Item>
           </SubMenu>
           <SubMenu
@@ -45,24 +42,15 @@ export default function BasicLayout(props) {
             title={
               <span>
                 <Icon type='laptop' />
-                subnav 2
+                简单的接口请求
               </span>
             }
           >
-            <Menu.Item key='6'>
-              <Link to='/demo6'>demo6</Link>
+            <Menu.Item key='demo1'>
+              <Link to='/demo1'>demo1</Link>
             </Menu.Item>
-            <Menu.Item key='7'>
-              <Link to='/demo7'>demo7</Link>
-            </Menu.Item>
-            <Menu.Item key='8'>
-              <Link to='/demo8'>demo8</Link>
-            </Menu.Item>
-            <Menu.Item key='9'>
-              <Link to='/demo9'>demo9</Link>
-            </Menu.Item>
-            <Menu.Item key='10'>
-              <Link to='/demo10'>demo10</Link>
+            <Menu.Item key='demo2'>
+              <Link to='/demo2'>demo2</Link>
             </Menu.Item>
           </SubMenu>
           <SubMenu
@@ -70,18 +58,44 @@ export default function BasicLayout(props) {
             title={
               <span>
                 <Icon type='notification' />
-                subnav 3
+                TODOLIST
               </span>
             }
           >
-            <Menu.Item key='11'>
+            <Menu.Item key='demo3'>
+              <Link to='/demo3'>demo3</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key='sub4'
+            title={
+              <span>
+                <Icon type='notification' />
+                这些可以先不看
+              </span>
+            }
+          >
+            <Menu.Item key='demo8'>
+              <Link to='/demo8'>demo3</Link>
+            </Menu.Item>
+            <Menu.Item key='demo9'>
+              <Link to='/demo9'>demo9</Link>
+            </Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key='sub5'
+            title={
+              <span>
+                <Icon type='notification' />
+                实战
+              </span>
+            }
+          >
+            <Menu.Item key='demo11'>
               <Link to='/demo11'>demo11</Link>
             </Menu.Item>
-            <Menu.Item key='12'>
+            <Menu.Item key='demo12'>
               <Link to='/demo12'>demo12</Link>
-            </Menu.Item>
-            <Menu.Item key='13'>
-              <Link to='/demo13'>demo13</Link>
             </Menu.Item>
           </SubMenu>
         </Menu>

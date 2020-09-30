@@ -46,12 +46,7 @@ function Add(props) {
           }}
           title={isEdit ? '编辑记录' : '新增记录'}
         >
-          <Form
-            initialValues={{
-              username: isEdit ? dataSource[currentIndex].username : '',
-              age: isEdit ? dataSource[currentIndex].age : '',
-            }}
-          >
+          <Form>
             <Form.Item label='姓名'>
               {getFieldDecorator('username', {
                 initialValue: isEdit ? dataSource[currentIndex].username : '',

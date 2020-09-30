@@ -31,7 +31,7 @@ export default function TodoList() {
   };
 
   return (
-    <div style={{ width: 400, background: '#073642', padding: 12, margin: 12 }}>
+    <div style={{ width: 400, padding: 12, margin: 12 }}>
       <div>
         {todos.map((todo) => (
           <div key={todo.id}>
