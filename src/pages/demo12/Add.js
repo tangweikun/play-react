@@ -29,16 +29,19 @@ function Add(props) {
               if (isEdit) {
                 updateData(
                   {
-                    username: values.username,
-                    age: values.age,
+                    name: values.name,
+                    desc: values.desc,
                   },
                   currentIndex
                 );
               } else {
                 addData({
-                  username: values.username,
-                  age: values.age,
+                  name: values.name,
+                  desc: values.desc,
+                  activityStartTime: values.activityTime[0],
+                  activityEndTime: values.activityTime[1],
                   id: Math.random().toString(16).slice(-8),
+                  validityType: values.validityType,
                 });
               }
 
@@ -71,8 +74,10 @@ function Add(props) {
               })(<Input placeholder='输入姓名' />)}
             </Form.Item>
             <Form.Item label='活动时间'>
-              {getFieldDecorator('age', {
-                initialValue: isEdit ? dataSource[currentIndex].age : '',
+              {getFieldDecorator('activityTime', {
+                initialValue: isEdit
+                  ? dataSource[currentIndex].activityTime
+                  : '',
                 rules: [{ required: true, message: 'Please input your age!' }],
               })(
                 <RangePicker
@@ -115,7 +120,7 @@ function Add(props) {
               <Form.Item>
                 <div style={{ display: 'flex' }}>
                   <span>发放</span>
-                  {getFieldDecorator('name', {
+                  {getFieldDecorator('days', {
                     initialValue: isEdit
                       ? dataSource[currentIndex].username
                       : '',
