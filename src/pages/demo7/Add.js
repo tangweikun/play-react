@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Input, Form } from 'antd';
-import { addData, updateData } from './api';
+import { addData, updateData, getData } from './api';
 
 function Add(props) {
   const {
@@ -39,6 +39,9 @@ function Add(props) {
                   id: Math.random().toString(16).slice(-8),
                 });
               }
+
+              const dataSource = getData();
+              setDataSource(dataSource);
             });
           }}
           title={isEdit ? '编辑记录' : '新增记录'}
@@ -51,6 +54,7 @@ function Add(props) {
           >
             <Form.Item label='姓名'>
               {getFieldDecorator('username', {
+                initialValue: isEdit ? dataSource[currentIndex].username : '',
                 rules: [
                   { required: true, message: 'Please input your username!' },
                 ],
@@ -58,6 +62,7 @@ function Add(props) {
             </Form.Item>
             <Form.Item label='年龄' name='age'>
               {getFieldDecorator('age', {
+                initialValue: isEdit ? dataSource[currentIndex].age : '',
                 rules: [{ required: true, message: 'Please input your age!' }],
               })(<Input placeholder='输入年龄' />)}
             </Form.Item>

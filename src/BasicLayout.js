@@ -49,19 +49,19 @@ export default function BasicLayout(props) {
               </span>
             }
           >
-            <Menu.Item key='1'>
+            <Menu.Item key='6'>
               <Link to='/demo6'>demo6</Link>
             </Menu.Item>
-            <Menu.Item key='2'>
+            <Menu.Item key='7'>
               <Link to='/demo7'>demo7</Link>
             </Menu.Item>
-            <Menu.Item key='3'>
+            <Menu.Item key='8'>
               <Link to='/demo8'>demo8</Link>
             </Menu.Item>
-            <Menu.Item key='4'>
+            <Menu.Item key='9'>
               <Link to='/demo9'>demo9</Link>
             </Menu.Item>
-            <Menu.Item key='5'>
+            <Menu.Item key='10'>
               <Link to='/demo10'>demo10</Link>
             </Menu.Item>
           </SubMenu>

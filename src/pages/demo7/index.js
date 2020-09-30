@@ -79,7 +79,7 @@ export default class Demo5 extends React.Component {
             setVisible={(visible) => this.setState({ visible })}
             currentIndex={this.state.currentIndex}
             dataSource={this.state.dataSource}
-            setDataSource={(dataSource) => this.setState(dataSource)}
+            setDataSource={(dataSource) => this.setState({ dataSource })}
           />
         )}
 
