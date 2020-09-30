@@ -19,15 +19,6 @@ export default class Demo5 extends React.Component {
     this.setState({ dataSource: [...dataSource] });
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    // 每次弹框关闭时都重新获取一次表单数据
-    // 可能存在bug
-    if (!this.state.visible && prevState.visible) {
-      const dataSource = getData();
-      this.setState({ dataSource: [...dataSource] });
-    }
-  }
-
   handleAdd() {
     this.setState({ isEdit: false, visible: true });
   }
