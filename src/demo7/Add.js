@@ -2,9 +2,16 @@ import React from 'react';
 import { Modal, Input, Form } from 'antd';
 import { addData, updateData } from './api';
 
-export default function Add(props) {
-  const [formRef] = Form.useForm(); // 非常重要，创建一个form表单的引用，语法固定，别改
-  const { isEdit, currentIndex, setVisible, dataSource, setDataSource } = props; // 这些都是从父级传下来的
+function Add(props) {
+  const {
+    isEdit,
+    currentIndex,
+    setVisible,
+    dataSource,
+    setDataSource,
+    form,
+  } = props; // 这些都是从父级传下来的
+  const { getFieldDecorator, validateFields } = form;
 
   return (
     <div>
@@ -15,7 +22,7 @@ export default function Add(props) {
             setVisible(false);
           }}
           onOk={() => {
-            formRef.validateFields().then((values) => {
+            validateFields().then((values) => {
               setVisible(false);
               if (isEdit) {
                 updateData(
@@ -36,20 +43,23 @@ export default function Add(props) {
           }}
           title={isEdit ? '编辑记录' : '新增记录'}
         >
-          {/* form={formRef}是将引用指向这个Form */}
           <Form
-            form={formRef}
             initialValues={{
               username: isEdit ? dataSource[currentIndex].username : '',
               age: isEdit ? dataSource[currentIndex].age : '',
             }}
           >
-            {/* name很重要，form用于管理字段值 */}
-            <Form.Item label='姓名' name='username'>
-              <Input />
+            <Form.Item label='姓名'>
+              {getFieldDecorator('username', {
+                rules: [
+                  { required: true, message: 'Please input your username!' },
+                ],
+              })(<Input placeholder='输入姓名' />)}
             </Form.Item>
             <Form.Item label='年龄' name='age'>
-              <Input />
+              {getFieldDecorator('age', {
+                rules: [{ required: true, message: 'Please input your age!' }],
+              })(<Input placeholder='输入年龄' />)}
             </Form.Item>
           </Form>
         </Modal>
@@ -57,3 +67,5 @@ export default function Add(props) {
     </div>
   );
 }
+
+export default Form.create({})(Add); // 用Form来装饰Add组件

@@ -33,6 +33,19 @@
 - https://jasonwatmore.com/post/2020/04/17/react-formik-master-details-crud-example
 - https://jasonwatmore.com/post/2020/01/27/react-fetch-http-get-request-examples
 
+- [TODOLIST](https://www.digitalocean.com/community/tutorials/how-to-build-a-react-to-do-app-with-react-hooks)
+- [demo](https://www.digitalocean.com/community/tutorials/five-ways-to-convert-react-class-components-to-functional-components-with-react-hooks)
+
+- https://www.digitalocean.com/community/tutorials/react-replacing-component-lifecycles-with-useeffect
+
+- https://www.digitalocean.com/community/tutorials/how-to-handle-dom-and-window-events-with-react
+
+- https://www.digitalocean.com/community/tutorials/react-countdown-timer-react-hooks
+
+- https://www.digitalocean.com/community/tutorials/how-to-share-state-across-react-components-with-context
+
+- https://www.digitalocean.com/community/tutorials/how-to-manage-state-with-hooks-on-react-components
+
 ### redux
 
 - [demo1](https://codesandbox.io/s/lomyoxqw1?file=/index.js)
