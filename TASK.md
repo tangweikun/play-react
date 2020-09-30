@@ -46,6 +46,12 @@
 
 - https://www.digitalocean.com/community/tutorials/how-to-manage-state-with-hooks-on-react-components
 
+- https://www.digitalocean.com/community/tutorials/react-createref
+
+- https://www.digitalocean.com/community/tutorials/react-converting-to-a-hook
+
+- https://www.digitalocean.com/community/tutorials/react-hooks
+
 ### redux
 
 - [demo1](https://codesandbox.io/s/lomyoxqw1?file=/index.js)

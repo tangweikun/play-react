@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Demo4 from './demo4';
-import Demo1 from './demo1';
-import Demo2 from './demo2';
-import Demo3 from './demo3';
-import Demo5 from './demo5';
-import Demo6 from './demo6';
-import Demo7 from './demo7';
-import Demo8 from './demo8';
-import Demo9 from './demo9';
+import Demo4 from './pages/demo4';
+import Demo1 from './pages/demo1';
+import Demo2 from './pages/demo2';
+import Demo3 from './pages/demo3';
+import Demo5 from './pages/demo5';
+import Demo6 from './pages/demo6';
+import Demo7 from './pages/demo7';
+import Demo8 from './pages/demo8';
+import Demo9 from './pages/demo9';
 
 function App() {
   return (
