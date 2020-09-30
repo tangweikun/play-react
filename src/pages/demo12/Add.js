@@ -13,7 +13,7 @@ function Add(props) {
     setDataSource,
     form,
   } = props; // 这些都是从父级传下来的
-  const { getFieldDecorator, validateFields } = form;
+  const { getFieldDecorator, validateFields, getFieldValue } = form;
 
   return (
     <div>
@@ -94,6 +94,42 @@ function Add(props) {
                 </Radio.Group>
               )}
             </Form.Item>
+
+            {/* 根据有效期类型进行显示内容上的更换 */}
+            {getFieldValue('validityType') === '1' ? (
+              <Form.Item>
+                {getFieldDecorator('time', {
+                  initialValue: isEdit ? dataSource[currentIndex].age : '',
+                  rules: [
+                    { required: true, message: 'Please input your age!' },
+                  ],
+                })(
+                  <RangePicker
+                    showTime={{ format: 'HH:mm' }}
+                    format='YYYY-MM-DD HH:mm'
+                    placeholder={['Start Time', 'End Time']}
+                  />
+                )}
+              </Form.Item>
+            ) : (
+              <Form.Item>
+                <div style={{ display: 'flex' }}>
+                  <span>发放</span>
+                  {getFieldDecorator('name', {
+                    initialValue: isEdit
+                      ? dataSource[currentIndex].username
+                      : '',
+                    rules: [
+                      {
+                        required: true,
+                        message: 'Please input your username!',
+                      },
+                    ],
+                  })(<Input style={{ width: 100 }} />)}
+                  <span>天内有效</span>
+                </div>
+              </Form.Item>
+            )}
           </Form>
         </Modal>
       }
