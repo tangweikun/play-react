@@ -12,6 +12,7 @@ import Demo8 from './pages/demo8';
 import Demo9 from './pages/demo9';
 import Demo10 from './pages/demo10';
 import Demo11 from './pages/demo11';
+import Demo12 from './pages/demo12';
 import BasicLayout from './BasicLayout';
 
 function App() {
@@ -52,6 +53,9 @@ function App() {
             </Route>
             <Route path='/demo11'>
               <Demo11 />
+            </Route>
+            <Route path='/demo12'>
+              <Demo12 />
             </Route>
           </Switch>
         </BasicLayout>
