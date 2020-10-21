@@ -1,7 +1,4 @@
-// TODO:使用Object.values
-// TODO:使用reduce
-
-// 难度 ⭐
+// 难度 ⭐⭐
 // 入参
 const data = {
   a1: 12,
@@ -9,17 +6,16 @@ const data = {
   a3: 14,
 };
 
-// 求和
 // 期望输出
-// const expectOutput = 39;
+// const expectOutput = {a1: 'a1-12', a2: 'a2-13', a3: 'a3-14' };
 
 // 答案
 function foo(inputData) {
-  let sum = 0;
-  for (let k in inputData) {
-    sum = sum + inputData[k];
+  const res = {};
+  for (var key in inputData) {
+    res[key] = `${key}-${inputData[key]}`;
   }
-  return sum;
+  return res;
 }
 
 // 打印出来的和期望输出一样就说明答案写对了
