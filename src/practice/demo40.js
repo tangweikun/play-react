@@ -1,15 +1,10 @@
 // 难度 ⭐
 // 入参
-const data = {
-  a1: 11,
-  a2: 33,
-  a3: 22,
-  a4: 4,
-};
+const data = [2, 3, 4, 5];
 
-// b1取a1, c2取a2，c3取a3，d1取a4的值
+// 求乘积
 // 期望输出
-// const expectOutput = { b1: 11, c2: 33, c3: 22, d1: 4 };
+// const expectOutput = 120
 
 // 答案
 function foo(inputData) {}
