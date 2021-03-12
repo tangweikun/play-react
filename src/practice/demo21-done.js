@@ -13,3 +13,12 @@ function foo(inputData) {}
 
 // 打印出来的和期望输出一样就说明答案写对了
 console.log(foo(data));
+function formData(data) {
+  const res = {};
+  for (let i in data) {
+    res[i] = data[i].map((x) => x * x).sort((a, b) => a - b);
+  }
+  return data;
+}
+
+console.log(formData(data));

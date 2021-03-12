@@ -9,8 +9,14 @@ const data = {
 // const expectOutput = [['a', 'b'], [[1, 4, 2], [3, 9, 7]]]
 
 // 答案错误
-function foo(inputData) {
-  return [Object.keys(inputData)].concat(Object.values(inputData));
+
+function foo(data) {
+  const arr = [[], []];
+  for (let key in data) {
+    arr[0].push(key);
+    arr[1].push(data[key]);
+  }
+  return arr;
 }
 
 // 打印出来的和期望输出一样就说明答案写对了
