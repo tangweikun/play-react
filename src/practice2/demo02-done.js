@@ -12,3 +12,9 @@ function foo(inputData) {}
 
 // 打印出来的和期望输出一样就说明答案写对了
 console.log(foo(1, 2, 3));
+
+function average(...data) {
+  return data.reduce((acc, cur) => acc + cur, 0) / data.length;
+}
+
+console.log(average(1, 2, 3));

@@ -21,7 +21,28 @@ const expectOutput = {
 };
 
 // 答案
-function foo(inputData) {}
+function foo(data) {
+  const res = {};
+
+  for (let key in data) {
+    const type = Object.prototype.toString
+      .call(data[key])
+      .slice(8, -1)
+      .toLowerCase();
+
+    res[type]
+      ? res[type].push({ [key]: data[key] })
+      : (res[type] = [{ [key]: data[key] }]);
+  }
+
+  if (res.boolean) {
+    res.bool = res.boolean;
+  }
+
+  const { boolean, ...rest } = res;
+
+  return rest;
+}
 
 // 打印出来的和期望输出一样就说明答案写对了
 console.log(foo(data));

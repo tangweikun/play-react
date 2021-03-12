@@ -10,5 +10,11 @@ const data = [1, 2, 3];
 // 答案
 function foo(inputData) {}
 
+function average(data) {
+  return data.reduce((acc, cur) => acc + cur, 0) / data.length;
+}
+
+console.log(average(data));
+
 // 打印出来的和期望输出一样就说明答案写对了
 console.log(foo(data));
